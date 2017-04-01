@@ -24,7 +24,10 @@ function loaded () {
 	});
 }
 
-document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? { 
+ 	capture: false, 
+ 	passive: false 
+ } : false); 
 
 </script>
 
